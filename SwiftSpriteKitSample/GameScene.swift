@@ -14,8 +14,8 @@ class GameScene: SKScene
     override func didMoveToView(view: SKView)
     {
         let screenSize : CGSize = UIScreen.mainScreen().bounds.size
-        let width  :Float = screenSize.width
-        let height :Float = screenSize.height
+        let width : CGFloat = screenSize.width
+        let height : CGFloat = screenSize.height
         
         var floor = SKSpriteNode(color : UIColor.greenColor(), size : CGSizeMake(width, 40))
         floor.position = CGPointMake(width/2, floor.size.height/2)
@@ -47,9 +47,9 @@ class GameScene: SKScene
     func addBoxWithPosition(position : CGPoint)
     {
         
-        var color :UIColor = UIColor(red : Float(drand48()),
-            green : Float(drand48()),
-            blue : Float(drand48()),
+        var color :UIColor = UIColor(red : CGFloat(drand48()),
+            green : CGFloat(drand48()),
+            blue : CGFloat(drand48()),
             alpha : 1)
         
         var box :SKSpriteNode = SKSpriteNode(color: color, size:CGSizeMake(40, 40))
